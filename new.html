@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+   body {
+        margin: 0;
+        height: 100vh;
+        text-align:center;
+        justify-content: center;
+        background:black;
+    }
+
+    .neon {
+        position: relative;
+        overflow: hidden;
+        filter: brightness(200%);
+    }
+
+    .text {
+        background-color: black;
+        color: white;
+        font-size: 60px;
+        font-weight: justify;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        position: relative;
+        user-select: none;
+    }
+
+    .text2 {
+      color: white;
+       font-size:40px;
+       font-weight: normal;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .text::before {
+        content: attr(data-text);
+        position: absolute;
+        color: white;
+        filter: blur(0.02em);
+        mix-blend-mode: difference;
+    }
+
+    .gradient {
+        position: absolute;
+        background: linear-gradient(45deg, white, black, white, black, white);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        mix-blend-mode: multiply;
+    }
+
+    .spotlight {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        right: 0;
+        bottom: 0;
+        background:
+            radial-gradient(
+                circle,
+                white,
+                transparent 25%
+            ) center / 25% 25%,
+            radial-gradient(
+                circle,
+                white,
+                black 25%
+            ) center / 12.5% 12.5%;
+        animation: light 5s linear infinite;
+        mix-blend-mode: color-dodge;
+    }
+
+    @keyframes light {
+        to {
+            transform: translate(50%, 50%);
+        }
+    }
+  </style>
+</head>
+<body>
+  <h4><div class="neon">
+<span class="text" data-text="Jagadeswari ">Jagadeswari Setti</span>
+<span class="gradient"></span>
+<span class="spotlight"></span>
+</div></h4>
+<div class="text">
+  <span class="gradient"></span>
+  <p >WEB DEVOLOPER</p>
+</div>
+<div class="text2">
+<div>
+<h3 class="text" data-text="ABOUT">ABOUT
+<span class="spotlight"></span></h3>
+<p>Hardworking and passionate computer science student.Eager to work as an intern to exhibit and improve the skills through experience</p>
+<h3 class="text" data-text="CONTACTS">CONTACTS
+<span class="spotlight"></span></h3><li>Phone no : 8919506090</li>
+<li>Email : jagadeswarisetti3@gmail.com</li>
+<li>Address : 47-3-8/1,Y-Junction, Rajahmundry</li>
+</div>
+<div>
+  <h3 class="text" data-text="SKILLS">SKILLS
+  <span class="spotlight"></span></h3><ul>
+<li>Python,C</li>
+<li>HTML,CSS</li>
+<li>SQL</li>
+</ul>
+</div>
+<div>
+  <h4 class="text" data-text="EXPERTISE"> EXPERTISE
+  <span class="spotlight"></span></h4><ul>
+<li>creativity</li>
+<li>communication skills</li>
+<li>Presentation</li>
+</ul>
+</div>
+<h3 class="text" data-text="LANGUAGES">LANGUAGES
+<span class="spotlight"></span></h3><ul>
+<li>English(Proficient)</li>
+<li>Telugu(Native)</li>
+</ul>
+<h3 class="text" data-text="HOBBIES">HOBBIES
+<span class="spotlight"></span></h3><ul>
+<li>Drawing</li>
+<li>Discussing about new things</li>
+</ul>
+</div>
+<div class="text2">
+  <h2 class="text" data-text="PROJECTS">PROJECTS
+  <span class="spotlight"></span></h2>
+  <h3>Plastic waste Management</h3>
+  <h3>Aavishkaar | 2021</h3>
+  <ul>
+    <li>Designed a preliminary model to understand the requirements.</li>
+    <li>Developed an e-commerce website with a plantation scheme</li>
+  </ul>
+  <h3>Self Driving Car</h3>
+  <h3>Inaguration of CM Block,AKNU | 2021</h3>
+  <ul>
+    <li>python Based Devolpment</li>
+    <li>Implemented a program to add a feature of self driving car</li>
+  </ul>
+  </div>
+  <div class="text2">
+    <h3 class="text" data-text="INTERNSHIP"> INTERNSHIP
+    <span class="spotlight"></span></h3>
+    <p>online</p>
+    <h3>Cybersecurity</h3>
+    <h3>Skill vertex- Spam and Phishing Mail Project</h3>
+    <ul>
+      <li>observing Difference between mails and seperate them.</li>
+    </ul>
+  </div>
+  <div class="text2">
+    <h2 class="text" data-text="CERTIFICATES">CERTIFICATES
+    <span class="spotlight"></span></h2>    <ul>
+      <li><strong>Udemy</strong>-Frontend web Development(ultimate course)</li>
+      <li><strong>Coursera</strong>-Programming for everybody(Getting started with Python)</li>
+      <li><strong>Swayam(CEC)-ongoing</strong>-Database Management Systems</li>
+      </ul>
+  </div>
+  <div class="text2">
+    <h2 class="text" data-text="EDUCATION">EDUCATION
+    <span class="spotlight"></span></h2>  <h3>ADIKAVI NANNAYA UNIVERSITY</h3>
+  <p>2019-2013</p>
+  <p>Bachelor of Technology-<strong>Grade(8.6)</strong></p>
+  <h3>PRATIBHA JUNIOR COLLEGE</h3>
+  <p>2017-2019</p>
+  <p>Intermediate-<strong>Grade(9.8)</strong></p>
+  <h3>NARAYANA E-TECHNO SCHOOL</h3>
+  <p>2016-2017</p>
+  <p>SSC-<strong>Grade(10.0)</strong></p>
+  <br>
+  <br>
+</div>
+</body>
+</html>
